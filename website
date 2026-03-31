@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yoga mit Marie</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #f7f6f2;
+  color: #2f2f2f;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8em;
+  margin: 0;
+}
+
+header p {
+  color: #6B8F71;
+  letter-spacing: 1px;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding-bottom: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #2f2f2f;
+  font-weight: 300;
+}
+
+nav a:hover {
+  color: #6B8F71;
+}
+
+/* Hero */
+.hero {
+  height: 70vh;
+  background: url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b') center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero h2 {
+  background: rgba(255,255,255,0.7);
+  padding: 20px 30px;
+  font-family: 'Playfair Display', serif;
+  border-radius: 10px;
+}
+
+/* Sections */
+.section {
+  max-width: 900px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+.section h2 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 30px;
+}
+
+/* Cards */
+.card {
+  background: white;
+  padding: 25px;
+  margin: 20px 0;
+  border-radius: 12px;
+}
+
+/* Contact */
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+button {
+  background: #A3B18A;
+  color: white;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #6B8F71;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 30px;
+  font-size: 0.9em;
+  color: #777;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Yoga mit Marie</h1>
+  <p>ruhig · achtsam · naturverbunden</p>
+</header>
+
+<nav>
+  <a href="#home">Start</a>
+  <a href="#angebot">Angebot</a>
+  <a href="#about">Über mich</a>
+  <a href="#kontakt">Kontakt</a>
+</nav>
+
+<section id="home" class="hero">
+  <h2>Finde deine Balance & innere Ruhe</h2>
+</section>
+
+<section id="angebot" class="section">
+  <h2>Mein Angebot</h2>
+
+  <div class="card">
+    <h3>Hatha Yoga Classic</h3>
+    <p>Sanfte Praxis für Körper und Geist.</p>
+  </div>
+
+  <div class="card">
+    <h3>Trauma-sensibles Yoga</h3>
+    <p>Achtsam, sicher und unterstützend.</p>
+  </div>
+
+  <div class="card">
+    <h3>Pre- & Postnatales Yoga</h3>
+    <p>Begleitung rund um Schwangerschaft.</p>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <h2>Über mich</h2>
+  <div class="card">
+    <p>
+      Ich bin Marie und begleite dich auf deinem Weg zu mehr Ruhe,
+      Achtsamkeit und Verbindung zu dir selbst.
+    </p>
+    <p>
+      Mein Yoga ist ruhig, klar und bodenständig –
+      mit Raum für dich.
+    </p>
+  </div>
+</section>
+
+<section id="kontakt" class="section">
+  <h2>Kontakt</h2>
+
+  <div class="card">
+    <p>Email: deine@email.de</p>
+    <p>Instagram: @Marie.YogaMit</p>
+  </div>
+
+  <div class="card">
+    <form action="https://formspree.io/f/DEINE-ID" method="POST">
+      <input type="text" name="name" placeholder="Dein Name" required>
+      <input type="email" name="email" placeholder="Deine Email" required>
+      <textarea name="message" placeholder="Deine Nachricht"></textarea>
+      <button type="submit">Nachricht senden</button>
+    </form>
+  </div>
+
+</section>
+
+<footer>
+  <p>© 2026 Yoga mit Marie</p>
+</footer>
+
+</body>
+</html>
