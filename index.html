@@ -1,234 +1,141 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dein Name – Körperarbeit & Präsenz</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yoga mit Marie</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: #f7f6f2;
-      color: #2f2f2f;
-      line-height: 1.6;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  color: white;
+}
 
-    header {
-      text-align: center;
-      padding: 40px 20px;
-    }
+/* Sections mit Hintergrundbildern */
+.section {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
 
-    header h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.8em;
-      margin: 0;
-    }
+.overlay {
+  background: rgba(0,0,0,0.3);
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 700px;
+}
 
-    header p {
-      color: #6B8F71;
-      letter-spacing: 1px;
-    }
+/* Typo */
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+}
 
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      padding-bottom: 20px;
-    }
+h1 {
+  font-size: 3em;
+}
 
-    nav a {
-      text-decoration: none;
-      color: #2f2f2f;
-      font-weight: 300;
-    }
+h2 {
+  font-size: 2.2em;
+}
 
-    nav a:hover {
-      color: #6B8F71;
-    }
+/* Inhaltsflächen */
+.content {
+  background: #f7f6f2;
+  color: #2f2f2f;
+  padding: 80px 20px;
+  text-align: center;
+}
 
-    .hero {
-      height: 70vh;
-      background: url(yoga1_website.jpg) center/cover;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
+.card {
+  max-width: 700px;
+  margin: 30px auto;
+}
 
-    .hero h2 {
-      background: rgba(255,255,255,0.7);
-      padding: 20px 30px;
-      font-family: 'Playfair Display', serif;
-      border-radius: 10px;
-    }
+/* Fade Effekt */
+.fade {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeIn 1.5s ease forwards;
+}
 
-    .section {
-      max-width: 800px;
-      margin: auto;
-      padding: 60px 20px;
-    }
-
-    .section h2 {
-      font-family: 'Playfair Display', serif;
-      margin-bottom: 30px;
-    }
-
-    .card {
-      background: white;
-      padding: 25px;
-      margin: 20px 0;
-      border-radius: 12px;
-    }
-
-    .light {
-      background-color: #f2f2f2;
-    }
-
-    input, textarea {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      border-radius: 8px;
-      border: 1px solid #ddd;
-    }
-
-    button {
-      background: #A3B18A;
-      color: white;
-      padding: 12px 18px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background: #6B8F71;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px;
-      font-size: 0.9em;
-      color: #777;
-    }
-  </style>
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
 </head>
 
 <body>
 
-<header>
-  <h1>Yoga mit Marie</h1>
-  <p>ruhig · achtsam · naturverbunden</p>
-</header>
-
-<nav>
-  <a href="#home">Start</a>
-  <a href="#angebot">Angebot</a>
-  <a href="#about">Über mich</a>
-  <a href="#kontakt">Kontakt</a>
-</nav>
-
-<section id="home" class="hero">
-  <h2>
-    Mut zur Entschleunigung<br><br>
-    In der Verbindung mit deinem Körper und deiner Atmung findest du eine bewusste Präsenz,
-    die dich zu dir selbst führt, dich spüren lässt und dir Stabilität im Alltag schenkt.
-  </h2>
+<!-- HERO -->
+<section class="section" style="background-image: url('images/hero.jpg')">
+  <div class="overlay fade">
+    <h1>Yoga mit Marie</h1>
+    <p>ruhig · achtsam · naturverbunden</p>
+  </div>
 </section>
 
-<section id="angebot" class="section">
-  <h2>Angebote</h2>
-
-  <div class="card">
-    <h3>Klassisches Hatha Yoga</h3>
-    <p>
-      Ruhige, achtsame Yogapraxis, die dich über Bewegung und Atmung in deinen Körper zurückführt.
-    </p>
+<!-- ANGEBOT -->
+<section class="section" style="background-image: url('images/angebot.jpg')">
+  <div class="overlay fade">
+    <h2>Angebot</h2>
   </div>
+</section>
 
+<section class="content">
   <div class="card">
-    <h3>Prä- & Postnatales Yoga</h3>
-    <p>
-      Sanfte Praxis für die Zeit während sowie nach der Schwangerschaft.
-    </p>
-  </div>
+    <h3>Hatha Yoga Classic</h3>
+    <p>Sanfte Praxis für Körper und Geist.</p>
 
-  <div class="card">
-    <h3>Traumasensibles Yoga</h3>
-    <p>
-      Eine besonders achtsame und selbstbestimmte Form der Praxis.
-    </p>
-  </div>
-    </p>
-  </div>
+    <h3>Trauma-sensibles Yoga</h3>
+    <p>Achtsam und sicher.</p>
 
-  <div class="card">
-    <h3>Bewegete Räumte & Naturverbindung</h3>
-    <p>
-      Räume im Laufe der Jahreszeiten, des Jahreskreises. Ein Moment zum Innehalten und Rückverbinden.
-    </p>
+    <h3>Pre- & Postnatales Yoga</h3>
+    <p>Begleitung rund um Schwangerschaft.</p>
   </div>
+</section>
 
+<!-- METHODIK -->
+<section class="section" style="background-image: url('images/methodik.jpg')">
+  <div class="overlay fade">
+    <h2>Methodik</h2>
+  </div>
+</section>
+
+<section class="content">
   <div class="card">
-    <h3>1:1 Begleitung mit Körperarbeit & somatische Praxis</h3>
-      <p>
-      Individuelle Begleitung zur Entwicklung deiner persönlichen Praxis.
-  
     <p>
-      Spüren statt funktionieren - eine Einladung, dich selbst wahrzunehmen.
-      Dein Atem wird zum Anker für Ruhe und Klarheit.
+      Mein Yoga verbindet Körper, Atem und Bewusstsein.
+      Es ist ruhig, klar und achtsam – angepasst an dich.
     </p>
   </div>
 </section>
 
-  <!-- 🌿 Conversion-Text -->
-  <div class="card">
-    <p>
-      Wenn dich das anspricht und du spürst, dass du dir mehr Ruhe,
-      Verbindung und Präsenz in deinem Alltag wünschst,
-      schreib mir gerne eine Nachricht oder komm in eine meiner Klassen.
-    </p>
-  </div>
-
-</section>
-
-<section id="about" class="section">
-  <h2>Über mich</h2>
-  <div class="card">
-    <p>
-      Ich begleite Menschen durch Körperarbeit, Atem und bewusste Bewegung zurück in die Verbindung mit sich selbst.
-    </p>
-    <p>
-      Meine Arbeit geht über klassisches Yoga hinaus und schafft einen Raum für Entschleunigung,
-      Wahrnehmung und eine neue Form von Präsenz.
-    </p>
+<!-- ÜBER MICH -->
+<section class="section" style="background-image: url('images/about.jpg')">
+  <div class="overlay fade">
+    <h2>Über mich</h2>
   </div>
 </section>
 
-<section id="kontakt" class="section">
-  <h2>Kontakt</h2>
-
+<section class="content">
   <div class="card">
-    <p>Email: marie.yogamit@posteo.com</p>
-    <p>Instagram: @marie.yogamit</p>
-  </div>
-
-  <div class="card">
-    <form action="https://formspree.io/f/DEINE-ID" method="POST">
-      <input type="text" name="name" placeholder="Dein Name" required>
-      <input type="email" name="email" placeholder="Deine Email" required>
-      <textarea name="message" placeholder="Deine Nachricht"></textarea>
-      <button type="submit">Nachricht senden</button>
-    </form>
+    <p>
+      Ich bin Marie und begleite dich auf deinem Weg
+      zu mehr Ruhe, Verbindung und Balance.
+    </p>
   </div>
 </section>
-
-<footer>
-  <p>© 2026 Yoga mit Marie</p>
-</footer>
 
 </body>
 </html>
