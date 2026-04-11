@@ -1,173 +1,27 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Yoga mit Marie</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter:wght@300;400&display=swap" rel="stylesheet">
-
-<style>
-body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  color: #2f2f2f;
-}
-
-/* BILDER FIXIERT */
-.image-section {
-  height: 80vh;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
-
-/* TEXT */
-.text-section {
-  background-color: #f7f3ed;
-  padding: 120px 20px;
-  text-align: center;
-}
-
-/* Farbflächen */
-.alt-bg {
-  background-color: #ABB2AB;
-}
-
-.alt-bg-2 {
-  background-color: #A2947A;
-  color: white;
-}
-
-.content {
-  max-width: 700px;
-  margin: auto;
-}
-
-/* TYPO */
-h1, h2 {
-  font-family: 'Playfair Display', serif;
-}
-
-h1 {
-  font-size: 3em;
-}
-
-h2 {
-  font-size: 2.2em;
-  margin-bottom: 20px;
-}
-
-p {
-  line-height: 1.7;
-}
-
-/* HERO TEXT */
-.hero-text {
-  position: absolute;
-  bottom: 60px;
-  left: 50%;
-  transform: translateX(-50%);
-  color: white;
-  text-align: center;
-}
-
-/* LOGO */
-.logo {
-  width: 120px;
-  margin-bottom: 20px;
-}
-
-/* SCROLL ANIMATION */
-.fade-up {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 1.2s ease;
-}
-
-.fade-up.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-</style>
-</head>
-
-<body>
-
 <!-- WELCOME -->
 <section class="image-section" style="background-image: url('images/welcome.jpg')"></section>
 
 <section class="text-section fade-up">
   <div class="content">
-    <img src="images/logo.png" class="logo" alt="Logo">
+    <img src="images/logo.png" class="logo">
     <h2>Connecting Body, Mind and Heart.</h2>
   </div>
 </section>
 
-<!-- HERO -->
-<section class="image-section" style="background-image: url('images/hero.jpg'); position: relative;">
-  <div class="hero-text fade-up">
-    <h1>Yoga mit Marie</h1>
-    <p>Hatha · Prä- und Postnatal · Trauma-Sensibel</p>
-  </div>
-</section>
-
-<!-- ÜBER MICH (JETZT OBEN) -->
-<section class="image-section" style="background-image: url('images/about.jpg')"></section>
-
-<section class="text-section alt-bg fade-up">
+<!-- ÜBER MICH TEASER -->
+<section class="text-section alt-bg">
   <div class="content">
     <h2>Über mich</h2>
-    <p>
-      Ich bin Marie und begleite dich auf deinem Weg
-      zu mehr Ruhe, Verbindung und Balance.
-    </p>
+    <p>Ich begleite dich zu mehr Ruhe und Balance.</p>
+    <a href="about.html" class="button">Mehr erfahren</a>
   </div>
 </section>
 
-<!-- METHODIK -->
-<section class="image-section" style="background-image: url('images/methodik.jpg')"></section>
-
-<section class="text-section fade-up">
+<!-- ANGEBOT TEASER -->
+<section class="text-section alt-bg-2">
   <div class="content">
-    <h2>Methodik</h2>
-    <p>
-      Mein Yoga verbindet Körper, Atem und Bewusstsein.
-      Ruhig, klar und achtsam – angepasst an deine individuellen Bedürfnisse.
-    </p>
+    <h2>Mein Angebot</h2>
+    <p>Yoga für Körper, Geist und Seele.</p>
+    <a href="angebot.html" class="button">Zum Angebot</a>
   </div>
 </section>
-
-<!-- ANGEBOT (JETZT UNTEN) -->
-<section class="image-section" style="background-image: url('images/angebot.jpg')"></section>
-
-<section class="text-section alt-bg-2 fade-up">
-  <div class="content">
-    <h2>Angebot</h2>
-
-    <p><strong>Hatha Yoga Classic</strong><br>
-    Sanfte Praxis für Körper, Geist und Seele.</p>
-
-    <p><strong>Trauma-sensibles Yoga</strong></p>
-
-    <p><strong>Prä- & Postnatales Yoga</strong><br>
-    Begleitung rund um die Schwangerschaft.</p>
-  </div>
-</section>
-
-<script>
-const elements = document.querySelectorAll('.fade-up');
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
-  });
-});
-
-elements.forEach(el => observer.observe(el));
-</script>
-
-</body>
-</html>
