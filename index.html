@@ -1,27 +1,228 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yoga mit Marie</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  color: #2f2f2f;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #f7f3ed;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #2f2f2f;
+  font-family: 'Playfair Display', serif;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #A2947A;
+}
+
+.spacer {
+  height: 80px;
+}
+
+/* BILDER */
+.image-section {
+  height: 75vh;
+  background-size: cover;
+  background-position: center;
+}
+
+/* TEXT */
+.text-section {
+  background-color: #f7f3ed;
+  padding: 120px 20px;
+  text-align: center;
+}
+
+.alt-bg {
+  background-color: #ABB2AB;
+}
+
+.alt-bg-2 {
+  background-color: #A2947A;
+  color: white;
+}
+
+.content {
+  max-width: 700px;
+  margin: auto;
+}
+
+/* TYPO */
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2.2em;
+  margin-bottom: 20px;
+}
+
+p {
+  line-height: 1.7;
+}
+
+/* LOGO */
+.logo {
+  width: 300px;
+  margin-bottom: 30px;
+}
+
+/* BUTTON */
+.button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: 1px solid #2f2f2f;
+  text-decoration: none;
+  color: #2f2f2f;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background: #2f2f2f;
+  color: white;
+}
+
+/* HERO TEXT */
+.hero-text {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  text-align: center;
+}
+
+/* SCROLL ANIMATION */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1.2s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<div class="navbar">
+  <a href="index.html">Home</a>
+  <a href="angebot.html">Mein Angebot</a>
+  <a href="about.html">Über mich</a>
+  <a href="kontakt.html">Kontakt</a>
+</div>
+
+<div class="spacer"></div>
+
 <!-- WELCOME -->
 <section class="image-section" style="background-image: url('images/welcome.jpg')"></section>
 
 <section class="text-section fade-up">
   <div class="content">
-    <img src="images/logo.png" class="logo">
+    <img src="images/logo.png" class="logo" alt="Logo">
     <h2>Connecting Body, Mind and Heart.</h2>
   </div>
 </section>
 
-<!-- ÜBER MICH TEASER -->
-<section class="text-section alt-bg">
+<!-- HERO -->
+<section class="image-section" style="background-image: url('images/hero.jpg'); position: relative;">
+  <div class="hero-text fade-up">
+    <h1>Yoga mit Marie</h1>
+    <p>Hatha · Prä- und Postnatal · Trauma-Sensibel</p>
+  </div>
+</section>
+
+<!-- ÜBER MICH -->
+<section class="image-section" style="background-image: url('images/about.jpg')"></section>
+
+<section class="text-section alt-bg fade-up">
   <div class="content">
     <h2>Über mich</h2>
-    <p>Ich begleite dich zu mehr Ruhe und Balance.</p>
+    <p>
+      Ich bin Marie und begleite dich auf deinem Weg
+      zu mehr Ruhe, Verbindung und Balance.
+    </p>
     <a href="about.html" class="button">Mehr erfahren</a>
   </div>
 </section>
 
-<!-- ANGEBOT TEASER -->
-<section class="text-section alt-bg-2">
+<!-- METHODIK -->
+<section class="image-section" style="background-image: url('images/methodik.jpg')"></section>
+
+<section class="text-section fade-up">
+  <div class="content">
+    <h2>Methodik</h2>
+    <p>
+      Mein Yoga verbindet Körper, Atem und Bewusstsein.
+      Ruhig, klar und achtsam – angepasst an deine individuellen Bedürfnisse.
+    </p>
+  </div>
+</section>
+
+<!-- ANGEBOT -->
+<section class="image-section" style="background-image: url('images/angebot.jpg')"></section>
+
+<section class="text-section alt-bg-2 fade-up">
   <div class="content">
     <h2>Mein Angebot</h2>
-    <p>Yoga für Körper, Geist und Seele.</p>
+
+    <p><strong>Hatha Yoga Classic</strong><br>
+    Sanfte Praxis für Körper, Geist und Seele.</p>
+
+    <p><strong>Trauma-sensibles Yoga</strong></p>
+
+    <p><strong>Prä- & Postnatales Yoga</strong><br>
+    Begleitung rund um die Schwangerschaft.</p>
+
     <a href="angebot.html" class="button">Zum Angebot</a>
   </div>
 </section>
+
+<script>
+const elements = document.querySelectorAll('.fade-up');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+});
+
+elements.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
