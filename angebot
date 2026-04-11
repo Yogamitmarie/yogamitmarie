@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Mein Angebot</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+body { font-family: 'Inter'; margin:0; }
+.text-section { background:#A2947A; color:white; padding:120px 20px; text-align:center; }
+.navbar { position:fixed; top:0; width:100%; background:#f7f3ed; padding:20px; text-align:center; }
+.navbar a { margin:0 20px; text-decoration:none; color:#2f2f2f; }
+.spacer { height:80px; }
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+  <a href="index.html">Home</a>
+  <a href="angebot.html">Mein Angebot</a>
+  <a href="about.html">Über mich</a>
+  <a href="kontakt.html">Kontakt</a>
+</div>
+
+<div class="spacer"></div>
+
+<section class="text-section">
+  <h1>Mein Angebot</h1>
+
+  <p><strong>Hatha Yoga Classic</strong><br>Sanfte Praxis</p>
+  <p><strong>Trauma-sensibles Yoga</strong></p>
+  <p><strong>Prä- & Postnatales Yoga</strong></p>
+
+</section>
+
+</body>
+</html>
