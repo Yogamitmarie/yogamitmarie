@@ -65,7 +65,7 @@ body {
 
 /* TEXT SECTIONS */
 .text-section {
-  padding: 60px 20px; /* kürzer! */
+  padding: 60px 20px;
   text-align: center;
 }
 
@@ -194,6 +194,10 @@ p {
   <div class="text-inner">
     <img src="images/logo.png" class="logo">
     <h2>Connecting Body, Mind and Heart.</h2>
+    <p>
+      Ein Raum für dich.<br>
+      Zum Ankommen, zum Atmen, zum Sein.
+    </p>
   </div>
 </section>
 
@@ -202,7 +206,7 @@ p {
   <div class="image-bg" style="background-image: url('images/hero.jpg')"></div>
   <div class="hero-text fade-up">
     <h1>Yoga mit Marie</h1>
-    <p>Hatha · Prä- und Postnatal · Trauma-Sensibel</p>
+    <p>Achtsamkeit · Verbindung · innere Balance</p>
   </div>
 </section>
 
@@ -215,8 +219,16 @@ p {
   <div class="text-inner">
     <h2>Über mich</h2>
     <p>
-      Ich begleite dich auf deinem Weg zu mehr Ruhe,
-      Verbindung und innerer Balance.
+      Ich bin Marie und begleite dich auf deinem Weg
+      zu mehr Ruhe, Verbindung und innerer Balance.
+    </p>
+    <p>
+      Yoga ist für mich ein Raum, in dem du dir selbst begegnen darfst –
+      ohne Druck, ohne Erwartungen.
+    </p>
+    <p>
+      Mit einer achtsamen und klaren Praxis unterstütze ich dich dabei,
+      wieder mehr bei dir anzukommen.
     </p>
     <a href="about.html" class="button">Mehr erfahren</a>
   </div>
@@ -230,9 +242,14 @@ p {
 <section class="text-section bg-cream fade-up">
   <div class="text-inner">
     <h2>Methodik</h2>
+    <p>Ruhig. Klar. Achtsam.</p>
     <p>
-      Ruhig. Klar. Achtsam.<br>
-      Yoga, das sich an dich anpasst – nicht umgekehrt.
+      Mein Yoga verbindet Bewegung, Atem und Bewusstsein.
+      Dabei steht nicht die perfekte Ausführung im Vordergrund,
+      sondern dein eigenes Erleben.
+    </p>
+    <p>
+      Du bestimmst das Tempo – ich halte den Raum.
     </p>
   </div>
 </section>
@@ -246,9 +263,18 @@ p {
   <div class="text-inner">
     <h2>Mein Angebot</h2>
 
-    <p><strong>Hatha Yoga</strong></p>
-    <p><strong>Trauma-sensibles Yoga</strong></p>
-    <p><strong>Prä- & Postnatales Yoga</strong></p>
+    <p><strong>Hatha Yoga</strong><br>
+    Sanfte, klassische Praxis für Körper und Geist.</p>
+
+    <p><strong>Trauma-sensibles Yoga</strong><br>
+    Ein geschützter Raum, in dem du dich sicher bewegen kannst.</p>
+
+    <p><strong>Prä- & Postnatales Yoga</strong><br>
+    Begleitung rund um Schwangerschaft und Rückbildung.</p>
+
+    <p style="margin-top:20px;">
+      Ich freue mich, dich auf deinem Weg begleiten zu dürfen.
+    </p>
 
     <a href="angebot.html" class="button">Zum Angebot</a>
   </div>
@@ -270,7 +296,7 @@ elements.forEach(el => observer.observe(el));
 window.addEventListener('scroll', () => {
   const images = document.querySelectorAll('.image-bg');
   images.forEach(img => {
-    const speed = 0.12; /* noch ruhiger */
+    const speed = 0.12;
     const y = window.scrollY * speed;
     img.style.transform = `translateY(${y}px)`;
   });
