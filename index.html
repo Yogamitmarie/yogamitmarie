@@ -3,7 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Yoga mit Marie</title>
+
+<title>Yoga mit Marie | Achtsames Yoga & Entspannung</title>
+
+<meta name="description" content="Yoga mit Marie – Achtsames Yoga für Körper, Geist und Seele. Hatha Yoga, Trauma-sensibles Yoga und Prä- & Postnatal Yoga.">
+
+<meta name="keywords" content="Yoga, Hatha Yoga, Trauma Yoga, Schwangerschaftsyoga, Entspannung, Achtsamkeit">
+
+<meta name="author" content="Marie">
+<link rel="canonical" href="https://deine-domain.de/">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Yoga mit Marie">
+<meta property="og:description" content="Ein Raum für dich. Zum Ankommen, zum Atmen, zum Sein.">
+<meta property="og:image" content="https://deine-domain.de/images/hero.jpg">
+<meta property="og:type" content="website">
+
+<!-- Fonts optimiert -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
@@ -12,7 +30,6 @@ body {
   margin: 0;
   font-family: 'Inter', sans-serif;
   color: #2f2f2f;
-  scroll-behavior: smooth;
 }
 
 /* NAVBAR */
@@ -34,8 +51,6 @@ body {
   color: #2f2f2f;
   font-family: 'Playfair Display', serif;
   font-size: 14px;
-  letter-spacing: 0.5px;
-  transition: color 0.3s ease;
 }
 
 .navbar a:hover {
@@ -46,7 +61,7 @@ body {
   height: 70px;
 }
 
-/* IMAGE */
+/* IMAGES optimiert */
 .image-section {
   height: 75vh;
   position: relative;
@@ -59,11 +74,10 @@ body {
   height: 110%;
   background-size: cover;
   background-position: center;
-  transform: translateY(0);
-  transition: transform 0.2s ease-out;
+  will-change: transform;
 }
 
-/* TEXT SECTIONS */
+/* TEXT */
 .text-section {
   padding: 60px 20px;
   text-align: center;
@@ -75,42 +89,23 @@ body {
 }
 
 /* COLORS */
-.bg-cream {
-  background-color: #f7f3ed;
-}
-
-.bg-green {
-  background-color: #ABB2AB;
-}
-
-.bg-brown {
-  background-color: #A2947A;
-  color: white;
-}
+.bg-cream { background: #f7f3ed; }
+.bg-green { background: #ABB2AB; }
+.bg-brown { background: #A2947A; color: white; }
 
 /* TYPO */
 h1, h2 {
   font-family: 'Playfair Display', serif;
 }
 
-h1 {
-  font-size: 2.6em;
-}
+h1 { font-size: 2.4em; }
+h2 { font-size: 1.8em; }
 
-h2 {
-  font-size: 2em;
-  margin-bottom: 15px;
-}
-
-p {
-  line-height: 1.7;
-  margin: 10px 0;
-}
+p { line-height: 1.7; }
 
 /* LOGO */
 .logo {
-  width: 220px;
-  margin-bottom: 20px;
+  width: 200px;
 }
 
 /* BUTTON */
@@ -121,7 +116,6 @@ p {
   border: 1px solid #2f2f2f;
   text-decoration: none;
   color: #2f2f2f;
-  transition: all 0.3s ease;
 }
 
 .button:hover {
@@ -129,7 +123,7 @@ p {
   color: white;
 }
 
-/* HERO TEXT */
+/* HERO */
 .hero-text {
   position: absolute;
   bottom: 50px;
@@ -143,7 +137,7 @@ p {
 .fade-up {
   opacity: 0;
   transform: translateY(40px);
-  transition: all 1.2s ease;
+  transition: all 1s ease;
 }
 
 .fade-up.visible {
@@ -153,29 +147,14 @@ p {
 
 /* MOBILE */
 @media (max-width: 768px) {
-
-  h1 {
-    font-size: 1.9em;
-  }
-
-  h2 {
-    font-size: 1.5em;
-  }
-
-  .text-section {
-    padding: 40px 15px;
-  }
-
-  .image-section {
-    height: 60vh;
-  }
+  h1 { font-size: 1.8em; }
+  h2 { font-size: 1.4em; }
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <div class="navbar">
   <a href="index.html">Home</a>
   <a href="angebot.html">Mein Angebot</a>
@@ -192,12 +171,9 @@ p {
 
 <section class="text-section bg-cream fade-up">
   <div class="text-inner">
-    <img src="images/logo.png" class="logo">
-    <h2>Connecting Body, Mind and Heart.</h2>
-    <p>
-      Ein Raum für dich.<br>
-      Zum Ankommen, zum Atmen, zum Sein.
-    </p>
+    <img src="images/logo.png" class="logo" alt="Yoga mit Marie Logo" loading="lazy">
+    <h1>Yoga in Hamburg – Achtsamkeit & Balance</h1>
+    <p>Ein Raum für dich. Zum Ankommen, zum Atmen, zum Sein.</p>
   </div>
 </section>
 
@@ -205,7 +181,7 @@ p {
 <section class="image-section">
   <div class="image-bg" style="background-image: url('images/hero.jpg')"></div>
   <div class="hero-text fade-up">
-    <h1>Yoga mit Marie</h1>
+    <h2>Yoga mit Marie</h2>
     <p>Achtsamkeit · Verbindung · innere Balance</p>
   </div>
 </section>
@@ -218,39 +194,8 @@ p {
 <section class="text-section bg-green fade-up">
   <div class="text-inner">
     <h2>Über mich</h2>
-    <p>
-      Ich bin Marie und begleite dich auf deinem Weg
-      zu mehr Ruhe, Verbindung und innerer Balance.
-    </p>
-    <p>
-      Yoga ist für mich ein Raum, in dem du dir selbst begegnen darfst –
-      ohne Druck, ohne Erwartungen.
-    </p>
-    <p>
-      Mit einer achtsamen und klaren Praxis unterstütze ich dich dabei,
-      wieder mehr bei dir anzukommen.
-    </p>
+    <p>Ich bin Marie und begleite dich auf deinem Weg zu mehr Ruhe und Balance.</p>
     <a href="about.html" class="button">Mehr erfahren</a>
-  </div>
-</section>
-
-<!-- METHODIK -->
-<section class="image-section">
-  <div class="image-bg" style="background-image: url('images/methodik.jpg')"></div>
-</section>
-
-<section class="text-section bg-cream fade-up">
-  <div class="text-inner">
-    <h2>Methodik</h2>
-    <p>Ruhig. Klar. Achtsam.</p>
-    <p>
-      Mein Yoga verbindet Bewegung, Atem und Bewusstsein.
-      Dabei steht nicht die perfekte Ausführung im Vordergrund,
-      sondern dein eigenes Erleben.
-    </p>
-    <p>
-      Du bestimmst das Tempo – ich halte den Raum.
-    </p>
   </div>
 </section>
 
@@ -262,42 +207,25 @@ p {
 <section class="text-section bg-brown fade-up">
   <div class="text-inner">
     <h2>Mein Angebot</h2>
-
-    <p><strong>Hatha Yoga</strong><br>
-    Sanfte, klassische Praxis für Körper und Geist.</p>
-
-    <p><strong>Trauma-sensibles Yoga</strong><br>
-    Ein geschützter Raum, in dem du dich sicher bewegen kannst.</p>
-
-    <p><strong>Prä- & Postnatales Yoga</strong><br>
-    Begleitung rund um Schwangerschaft und Rückbildung.</p>
-
-    <p style="margin-top:20px;">
-      Ich freue mich, dich auf deinem Weg begleiten zu dürfen.
-    </p>
-
+    <p>Hatha Yoga · Trauma-sensibel · Prä- & Postnatal</p>
     <a href="angebot.html" class="button">Zum Angebot</a>
   </div>
 </section>
 
 <script>
-const elements = document.querySelectorAll('.fade-up');
-
+// Fade Animation (optimiert)
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
+    if (entry.isIntersecting) entry.target.classList.add('visible');
   });
 });
 
-elements.forEach(el => observer.observe(el));
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
+// Parallax reduziert für bessere Performance
 window.addEventListener('scroll', () => {
-  const images = document.querySelectorAll('.image-bg');
-  images.forEach(img => {
-    const speed = 0.12;
-    const y = window.scrollY * speed;
+  const y = window.scrollY * 0.08;
+  document.querySelectorAll('.image-bg').forEach(img => {
     img.style.transform = `translateY(${y}px)`;
   });
 });
