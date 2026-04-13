@@ -34,6 +34,7 @@ body {
   color: #2f2f2f;
   font-family: 'Playfair Display', serif;
   font-size: 14px;
+  letter-spacing: 0.5px;
   transition: color 0.3s ease;
 }
 
@@ -45,9 +46,9 @@ body {
   height: 70px;
 }
 
-/* IMAGE SECTION */
+/* IMAGE */
 .image-section {
-  height: 70vh;
+  height: 75vh;
   position: relative;
   overflow: hidden;
 }
@@ -64,27 +65,26 @@ body {
 
 /* TEXT SECTIONS */
 .text-section {
-  padding: 100px 20px;
-  display: flex;
-  justify-content: center;
-}
-
-.card {
-  background: #f7f3ed;
-  padding: 60px 40px;
-  max-width: 600px;
-  width: 90%;
+  padding: 60px 20px; /* kürzer! */
   text-align: center;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
-.alt-bg .card {
-  background: #ABB2AB;
-  color: #2f2f2f;
+.text-inner {
+  max-width: 800px;
+  margin: auto;
 }
 
-.alt-bg-2 .card {
-  background: #A2947A;
+/* COLORS */
+.bg-cream {
+  background-color: #f7f3ed;
+}
+
+.bg-green {
+  background-color: #ABB2AB;
+}
+
+.bg-brown {
+  background-color: #A2947A;
   color: white;
 }
 
@@ -94,15 +94,17 @@ h1, h2 {
 }
 
 h1 {
-  font-size: 2.5em;
+  font-size: 2.6em;
 }
 
 h2 {
   font-size: 2em;
+  margin-bottom: 15px;
 }
 
 p {
-  line-height: 1.6;
+  line-height: 1.7;
+  margin: 10px 0;
 }
 
 /* LOGO */
@@ -114,8 +116,8 @@ p {
 /* BUTTON */
 .button {
   display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px;
+  margin-top: 25px;
+  padding: 10px 22px;
   border: 1px solid #2f2f2f;
   text-decoration: none;
   color: #2f2f2f;
@@ -130,7 +132,7 @@ p {
 /* HERO TEXT */
 .hero-text {
   position: absolute;
-  bottom: 40px;
+  bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
   color: white;
@@ -152,20 +154,16 @@ p {
 /* MOBILE */
 @media (max-width: 768px) {
 
-  .navbar {
-    gap: 15px;
-  }
-
   h1 {
-    font-size: 1.8em;
+    font-size: 1.9em;
   }
 
   h2 {
-    font-size: 1.6em;
+    font-size: 1.5em;
   }
 
-  .card {
-    padding: 40px 20px;
+  .text-section {
+    padding: 40px 15px;
   }
 
   .image-section {
@@ -192,8 +190,8 @@ p {
   <div class="image-bg" style="background-image: url('images/welcome.jpg')"></div>
 </section>
 
-<section class="text-section fade-up">
-  <div class="card">
+<section class="text-section bg-cream fade-up">
+  <div class="text-inner">
     <img src="images/logo.png" class="logo">
     <h2>Connecting Body, Mind and Heart.</h2>
   </div>
@@ -213,12 +211,12 @@ p {
   <div class="image-bg" style="background-image: url('images/about.jpg')"></div>
 </section>
 
-<section class="text-section alt-bg fade-up">
-  <div class="card">
+<section class="text-section bg-green fade-up">
+  <div class="text-inner">
     <h2>Über mich</h2>
     <p>
-      Ich bin Marie und begleite dich auf deinem Weg
-      zu mehr Ruhe, Verbindung und Balance.
+      Ich begleite dich auf deinem Weg zu mehr Ruhe,
+      Verbindung und innerer Balance.
     </p>
     <a href="about.html" class="button">Mehr erfahren</a>
   </div>
@@ -229,12 +227,12 @@ p {
   <div class="image-bg" style="background-image: url('images/methodik.jpg')"></div>
 </section>
 
-<section class="text-section fade-up">
-  <div class="card">
+<section class="text-section bg-cream fade-up">
+  <div class="text-inner">
     <h2>Methodik</h2>
     <p>
-      Mein Yoga verbindet Körper, Atem und Bewusstsein.
-      Ruhig, klar und achtsam – angepasst an deine individuellen Bedürfnisse.
+      Ruhig. Klar. Achtsam.<br>
+      Yoga, das sich an dich anpasst – nicht umgekehrt.
     </p>
   </div>
 </section>
@@ -244,25 +242,21 @@ p {
   <div class="image-bg" style="background-image: url('images/angebot.jpg')"></div>
 </section>
 
-<section class="text-section alt-bg-2 fade-up">
-  <div class="card">
+<section class="text-section bg-brown fade-up">
+  <div class="text-inner">
     <h2>Mein Angebot</h2>
 
-    <p><strong>Hatha Yoga Classic</strong><br>
-    Sanfte Praxis für Körper, Geist und Seele.</p>
-
+    <p><strong>Hatha Yoga</strong></p>
     <p><strong>Trauma-sensibles Yoga</strong></p>
-
-    <p><strong>Prä- & Postnatales Yoga</strong><br>
-    Begleitung rund um die Schwangerschaft.</p>
+    <p><strong>Prä- & Postnatales Yoga</strong></p>
 
     <a href="angebot.html" class="button">Zum Angebot</a>
   </div>
 </section>
 
 <script>
-/* FADE */
 const elements = document.querySelectorAll('.fade-up');
+
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -270,13 +264,13 @@ const observer = new IntersectionObserver(entries => {
     }
   });
 });
+
 elements.forEach(el => observer.observe(el));
 
-/* PARALLAX */
 window.addEventListener('scroll', () => {
   const images = document.querySelectorAll('.image-bg');
   images.forEach(img => {
-    const speed = 0.15;
+    const speed = 0.12; /* noch ruhiger */
     const y = window.scrollY * speed;
     img.style.transform = `translateY(${y}px)`;
   });
